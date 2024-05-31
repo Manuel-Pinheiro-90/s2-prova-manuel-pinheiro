@@ -825,12 +825,9 @@ export class SerUtenteService {
 getpostAutor():Iuser[]{
 
 let postautor =this.userArr.map((a)=>{
-
-  const tuttiIPost=this.todosvc.todoArr.filter((b)=> b.userId === a.id)
-
-  a.todo= tuttiIPost;
-
-  return a;
+ const tuttiIPost=this.todosvc.todoArr.filter((b)=> b.userId === a.id)
+a.todo= tuttiIPost;
+return a;
 
 
 })
@@ -843,21 +840,14 @@ return postautor;
 
 
   getPost():Itodo[]{
-
-    let postconAutore =this.todosvc.todoArr.map((k)=>{
-
-      let autore = this.userArr.find((u)=> u.id === k.userId);
-
-      k.author=autore
-
-      return k;
+let postconAutore =this.todosvc.todoArr.map((k)=>{
+let autore = this.userArr.find((u)=> u.id === k.userId);
+k.author=autore
+return k;
     })
 
 
 return postconAutore
-
-
-
 }
 
 
