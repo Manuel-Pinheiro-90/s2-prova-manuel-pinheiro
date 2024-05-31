@@ -1,0 +1,23 @@
+<p>todouser works!</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col col col-12" *ngFor="let t of utenticontodo">
+      <div class="card">
+        <div class="card-body">
+          <img [src]="[t.image]" alt="" />
+          <h5 class="card-title">{{ t.firstName }} {{ t.lastName }}></h5>
+          <div
+            class="card"
+            *ngFor="let roba of t.todo"
+            class="card"
+            [ngClass]="{ 'bg-success': roba.completed }"
+          >
+            <p>{{ roba.todo }}</p>
+            <input type="checkbox" [(ngModel)]="roba.completed" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

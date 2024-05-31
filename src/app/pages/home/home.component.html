@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col col col-12" *ngFor="let t of todoconautore">
+      <app-single-comp [art]="t"></app-single-comp>
+    </div>
+  </div>
+</div>
+
+<!--
+
+  vecchio post messo in home per prova
+
+  div
+        class="card"
+        *ngFor="let art of todoconautore"
+        [ngClass]="{ 'bg-success': art.completed }"
+      >
+        <div class="card-body">
+          <h5 class="card-title">{{ art.todo }}</h5>
+
+          <p class="card-text" *ngIf="art.author">
+            Autore: {{ art.author.firstName }} {{ art.author.lastName }}
+          </p>
+          <input type="checkbox" [(ngModel)]="art.completed" />
+        </div>
+      </div>
+
+
+    -->

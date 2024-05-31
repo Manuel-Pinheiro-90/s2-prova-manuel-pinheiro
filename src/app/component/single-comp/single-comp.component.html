@@ -1,0 +1,10 @@
+<div class="card" [ngClass]="{ 'bg-success': art.completed }">
+  <p class="card-text" *ngIf="art.author">
+    Autore: {{ art.author.firstName }} {{ art.author.lastName }}
+  </p>
+  <div class="card-body">
+    <h5 class="card-title">{{ art.todo }}</h5>
+
+    <input type="checkbox" [(ngModel)]="art.completed" />
+  </div>
+</div>
