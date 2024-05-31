@@ -10,6 +10,7 @@ import { TodofinComponent } from './pages/todofin/todofin.component';
 import { TodouserComponent } from './pages/todouser/todouser.component';
 import { NavComponent } from './component/nav/nav.component';
 import { FormsModule } from '@angular/forms';
+import { Page404Component } from './pages/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     TodofinComponent,
     TodouserComponent,
-    NavComponent
+    NavComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,

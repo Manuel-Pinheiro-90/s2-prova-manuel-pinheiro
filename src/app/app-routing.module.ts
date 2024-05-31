@@ -1,3 +1,4 @@
+import { Page404Component } from './pages/page404/page404.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -13,8 +14,11 @@ const routes: Routes = [
 },
 {path:'todouser',
   component: TodouserComponent
-}
+},
 
+{path:'**',
+  component: Page404Component
+}
 
 
 
