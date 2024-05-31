@@ -858,17 +858,6 @@ return this.todosvc.todoArr.filter((a)=> a.completed === true)
 
 
 
-serchTodobyName(request:string):Itodo[]{
-if(request !== undefined){
-   let postAutor =this.getPost();
-  return postAutor.filter((a)=> a.author?.firstName.toLowerCase().includes(request.toLowerCase()))
-}
-return[]
-
-
-}
-
-
 
 
 

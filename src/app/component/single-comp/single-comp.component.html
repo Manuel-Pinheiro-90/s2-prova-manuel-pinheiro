@@ -7,7 +7,9 @@
   </h2>
   <div class="card-body">
     <h5 class="card-title text-light text-center">{{ art.todo }}</h5>
-
+    <p class="text-light">
+      {{ art.completed ? "completato" : "da completare" }}
+    </p>
     <input type="checkbox" [(ngModel)]="art.completed" />
   </div>
 </div>
