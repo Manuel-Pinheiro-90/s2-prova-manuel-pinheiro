@@ -1,30 +1,41 @@
-<nav class="navbar navbar-expand bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" routerLink="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="todofin">componente1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="todouser">pcomponente 2</a>
-        </li>
-        <li class="nav-item"></li>
-      </ul>
+<nav class="navbar navbar-expand bg-warning position-sticky top-0 z-2">
+  <div class="container">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link fs-2 fw-bold" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link fs-2"
+              routerLink="todofin"
+              routerLinkActive="active-link"
+              >Completati</a
+            >
+          </li>
+          <li class="nav-item fs-2">
+            <a
+              class="nav-link"
+              routerLink="todouser"
+              routerLinkActive="active-link"
+              >Utenti</a
+            >
+          </li>
+          <li class="nav-item"></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

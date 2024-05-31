@@ -1,20 +1,26 @@
 <p>todouser works!</p>
 
 <div class="container">
-  <div class="row">
-    <div class="col col col-12" *ngFor="let t of utenticontodo">
-      <div class="card">
-        <div class="card-body">
-          <img [src]="[t.image]" alt="" />
-          <h5 class="card-title">{{ t.firstName }} {{ t.lastName }}></h5>
+  <div class="row row-cols-4">
+    <div class="col my-3" *ngFor="let t of utenticontodo">
+      <div class="card h-100 bg-black">
+        <div class="card-body d-flex flex-column align-items-center">
+          <img class="max-h" [src]="[t.image]" alt="" />
+          <h5 class="card-title text-light">
+            {{ t.firstName }} {{ t.lastName }}
+          </h5>
           <div
-            class="card"
+            class="card w-100"
             *ngFor="let roba of t.todo"
-            class="card"
-            [ngClass]="{ 'bg-success': roba.completed }"
+            [ngClass]="{
+              'bg-success': roba.completed,
+              'color-dis': !roba.completed
+            }"
           >
-            <p>{{ roba.todo }}</p>
-            <input type="checkbox" [(ngModel)]="roba.completed" />
+            <div class="p-3 text-center">
+              <p class="p-4 text-light">{{ roba.todo }}</p>
+              <input type="checkbox" [(ngModel)]="roba.completed" />
+            </div>
           </div>
         </div>
       </div>
